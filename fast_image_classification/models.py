@@ -1,4 +1,4 @@
-from tensorflow.keras.applications import MobileNet, ResNet50
+from tensorflow.keras.applications import MobileNetV2, ResNet50
 from tensorflow.keras.layers import (
     Dense,
     Input,
@@ -22,7 +22,7 @@ def get_model_classification(
 ):
     inputs = Input(input_shape)
     if model == "mobilenet":
-        base_model = MobileNet(
+        base_model = MobileNetV2(
             include_top=False, input_shape=input_shape, weights=weights
         )
     else:
