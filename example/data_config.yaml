@@ -1,0 +1,3 @@
+input_shape: [null, null, 3]
+resize_shape: [128, 128]
+images_base_path: ""
