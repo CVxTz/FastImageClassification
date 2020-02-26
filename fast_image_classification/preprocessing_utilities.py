@@ -1,9 +1,4 @@
-import numpy as np
 import cv2
-import os
-from tqdm import tqdm
-from glob import glob
-from pathlib import Path
 
 
 def read_img_from_path(path):
@@ -11,8 +6,7 @@ def read_img_from_path(path):
     return img
 
 
-def resize_img(img, h=128, w=1024):
-
+def resize_img(img, h=128, w=128):
     desired_size_h = h
     desired_size_w = w
 

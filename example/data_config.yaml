@@ -1,3 +1,5 @@
 input_shape: [null, null, 3]
-resize_shape: [128, 128]
-images_base_path: ""
+resize_shape: [224, 224]
+images_base_path: '../example/data/'
+targets: ['beach', 'city', 'sunset', 'trees']
+image_name_col: 'name'
