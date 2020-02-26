@@ -43,7 +43,9 @@ def get_model_classification(
 
     model = Model(inputs, out)
     if multi_class:
-        model.compile(optimizer=Adam(0.0001), loss=categorical_crossentropy , metrics=["acc"])
+        model.compile(
+            optimizer=Adam(0.0001), loss=categorical_crossentropy, metrics=["acc"]
+        )
     else:
         model.compile(
             optimizer=Adam(0.0001), loss=binary_crossentropy, metrics=[binary_accuracy]

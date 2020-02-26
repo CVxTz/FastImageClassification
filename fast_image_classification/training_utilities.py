@@ -19,14 +19,14 @@ def get_seq():
     sometimes = lambda aug: iaa.Sometimes(0.1, aug)
     seq = iaa.Sequential(
         [
-            sometimes(iaa.Affine(scale={"x": (0.9, 1.1)})),
+            sometimes(iaa.Affine(scale={"x": (0.8, 1.2)})),
             sometimes(iaa.Fliplr(p=0.5)),
-            sometimes(iaa.Affine(scale={"y": (0.9, 1.1)})),
-            sometimes(iaa.Affine(translate_percent={"x": (-0.1, 0.1)})),
-            sometimes(iaa.Affine(translate_percent={"y": (-0.1, 0.1)})),
-            sometimes(iaa.Affine(rotate=(-10, 10))),
-            sometimes(iaa.Affine(shear=(-5, 5))),
-            sometimes(iaa.AdditiveGaussianNoise(scale=0.01 * 255)),
+            sometimes(iaa.Affine(scale={"y": (0.8, 1.2)})),
+            sometimes(iaa.Affine(translate_percent={"x": (-0.2, 0.2)})),
+            sometimes(iaa.Affine(translate_percent={"y": (-0.2, 0.2)})),
+            sometimes(iaa.Affine(rotate=(-20, 20))),
+            sometimes(iaa.Affine(shear=(-20, 20))),
+            sometimes(iaa.AdditiveGaussianNoise(scale=0.07 * 255)),
             sometimes(iaa.GaussianBlur(sigma=(0, 3.0))),
         ],
         random_order=True,
