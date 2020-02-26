@@ -62,6 +62,12 @@ def train_from_csv(csv_path, data_config_path, training_config_path):
 
 
 if __name__ == "__main__":
+    """
+    python train.py --csv_path "../example/data.csv" \
+                    --data_config_path "../example/data_config.yaml" \
+                    --training_config_path "../example/training_config.yaml"
+    
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv_path", help="csv_path", default="../example/data.csv")
     parser.add_argument(

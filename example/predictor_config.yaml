@@ -1,0 +1,3 @@
+resize_shape: [224, 224]
+targets: ['beach', 'city', 'sunset', 'trees']
+model_path: "image_classification.h5"
