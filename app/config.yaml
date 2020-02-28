@@ -1,0 +1,5 @@
+resize_shape: [224, 224]
+targets: ['beach', 'city', 'sunset', 'trees']
+model_path: "image_classification.h5"
+model_url: "https://github.com/CVxTz/FastImageClassification/releases/download/v0.1/image_classification.h5"
+model_sha256: "d5cd9082651faa826cab4562f60e3095502286b5ea64d5b25ba3682b66fbc305"

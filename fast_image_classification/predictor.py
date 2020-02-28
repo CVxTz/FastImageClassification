@@ -5,7 +5,12 @@ import yaml
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.models import load_model
 
-from preprocessing_utilities import read_img_from_path, resize_img, read_from_file
+from fast_image_classification.preprocessing_utilities import (
+    read_img_from_path,
+    resize_img,
+    read_from_file,
+)
+from fast_image_classification.utils import download_model
 
 
 class ImagePredictor:
@@ -28,6 +33,17 @@ class ImagePredictor:
             targets=config["targets"],
         )
         return predictor
+
+    @classmethod
+    def init_from_config_url(cls, config_path):
+        with open(config_path, "r") as f:
+            config = yaml.load(f, yaml.SafeLoader)
+
+        download_model(
+            config["model_url"], config["model_path"], config["model_sha256"]
+        )
+
+        return cls.init_from_config_path(config_path)
 
     def predict_from_array(self, arr):
         arr = resize_img(arr, h=self.resize_size[0], w=self.resize_size[1])

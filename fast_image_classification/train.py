@@ -4,8 +4,11 @@ import argparse
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, EarlyStopping
 
-from models import get_model_classification
-from training_utilities import dataframe_to_list_samples, batch_generator
+from fast_image_classification.models import get_model_classification
+from fast_image_classification.training_utilities import (
+    dataframe_to_list_samples,
+    batch_generator,
+)
 
 
 def train_from_csv(csv_path, data_config_path, training_config_path):

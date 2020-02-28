@@ -5,7 +5,10 @@ import cv2
 import numpy as np
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
-from preprocessing_utilities import read_img_from_path, resize_img
+from fast_image_classification.preprocessing_utilities import (
+    read_img_from_path,
+    resize_img,
+)
 
 SampleFromPath = namedtuple("Sample", ["path", "target_vector"])
 import imgaug.augmenters as iaa
