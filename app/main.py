@@ -1,7 +1,4 @@
 from fastapi import FastAPI, File, UploadFile
-import sys
-
-sys.path.append("../")
 
 from fast_image_classification.predictor import ImagePredictor
 
