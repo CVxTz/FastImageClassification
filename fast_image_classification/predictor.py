@@ -63,7 +63,7 @@ class ImagePredictor:
 
 if __name__ == "__main__":
     """
-    python train.py --predictor_config "../example/predictor_config.yaml"
+    python predictor.py --predictor_config "../example/predictor_config.yaml"
 
     """
     parser = argparse.ArgumentParser()
