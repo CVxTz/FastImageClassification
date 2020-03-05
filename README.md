@@ -1,5 +1,7 @@
 # Fast_Image_Classification
 
+Code for https://towardsdatascience.com/a-step-by-step-tutorial-to-build-and-deploy-an-image-classification-api-95fa449f0f6a
+
 ### Data
 Download data : <https://github.com/CVxTz/ToyImageClassificationDataset>
 
