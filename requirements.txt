@@ -4,7 +4,7 @@ tensorflow==2.0.1
 imgaug==0.3.0
 pandas==0.25.2
 fastapi==0.49.0
-PyYAML==5.3
+PyYAML==5.4
 scikit_learn==0.22.2
 uvicorn
 python-multipart
