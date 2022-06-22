@@ -1,5 +1,5 @@
 opencv_python==4.1.1.26
-numpy==1.17.3
+numpy==1.22.0
 tensorflow==2.0.1
 imgaug==0.3.0
 pandas==0.25.2
